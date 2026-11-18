@@ -4,120 +4,105 @@
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector("#nav-menu");
-const menuIcon = menuToggle.querySelector("i");
+const menuIcon = menuToggle ? menuToggle.querySelector("i") : null;
 
+if (menuToggle && navMenu) {
 
-menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("active");
+        document.body.classList.toggle("nav-open", isOpen);
 
-    navMenu.classList.toggle("active");
-
-
-    // Change menu icon
-    if (navMenu.classList.contains("active")) {
-
-        menuIcon.classList.remove("fa-bars");
-        menuIcon.classList.add("fa-times");
-
-    } else {
-
-        menuIcon.classList.remove("fa-times");
-        menuIcon.classList.add("fa-bars");
-
-    }
-
-});
-
-
-// ==============================
-// CLOSE MOBILE MENU AFTER CLICKING A LINK
-// ==============================
-
-const navLinks = document.querySelectorAll("#nav-menu a");
-
-
-navLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navMenu.classList.remove("active");
-
-        menuIcon.classList.remove("fa-times");
-        menuIcon.classList.add("fa-bars");
-
+        if (menuIcon) {
+            menuIcon.classList.toggle("fa-bars", !isOpen);
+            menuIcon.classList.toggle("fa-times", isOpen);
+        }
     });
 
-});
+    // Close on nav link click
+    navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            document.body.classList.remove("nav-open");
+            if (menuIcon) {
+                menuIcon.classList.replace("fa-times", "fa-bars");
+            }
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", function (e) {
+        if (navMenu.classList.contains("active") &&
+            !navMenu.contains(e.target) &&
+            !menuToggle.contains(e.target)) {
+            navMenu.classList.remove("active");
+            document.body.classList.remove("nav-open");
+            if (menuIcon) {
+                menuIcon.classList.replace("fa-times", "fa-bars");
+            }
+        }
+    });
+
+}
 
 
 // ==============================
-// PROJECT FILTERING
+// PROJECT FILTERING + COMPLEXITY SORT
 // ==============================
 
 const filterButtons = document.querySelectorAll(".filters button");
-const projectCards = document.querySelectorAll(".project-card");
-
+const projectsGrid  = document.querySelector(".projects-grid");
+const projectCards  = Array.from(document.querySelectorAll(".project-card"));
 
 filterButtons.forEach(button => {
-
     button.addEventListener("click", () => {
 
-
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-
-        // Add active class to selected button
+        // Active state on button
+        filterButtons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
 
-
-        // Get selected category
         const filter = button.getAttribute("data-filter");
 
+        // Determine which cards to show
+        const visible = filter === "all"
+            ? [...projectCards]
+            : projectCards.filter(card => card.classList.contains(filter));
 
-        projectCards.forEach(card => {
-
-
-            // Show all projects
-            if (filter === "all") {
-
-                card.style.display = "flex";
-
-            }
-
-            // Show selected category
-            else if (card.classList.contains(filter)) {
-
-                card.style.display = "flex";
-
-            }
-
-            // Hide other projects
-            else {
-
-                card.style.display = "none";
-
-            }
-
-
+        // Sort visible cards by complexity (data-complexity attr, highest first)
+        visible.sort((a, b) => {
+            return (parseInt(b.dataset.complexity) || 0) -
+                   (parseInt(a.dataset.complexity) || 0);
         });
 
+        // Hide all, then re-append in sorted order
+        projectCards.forEach(card => {
+            card.style.display = "none";
+        });
+
+        visible.forEach(card => {
+            card.style.display = "flex";
+            projectsGrid.appendChild(card); // re-order in DOM
+        });
 
     });
-
 });
 
 
 // ==============================
-// PROJECT CARD ANIMATION
+// PROJECT CARD ANIMATION ON SCROLL
 // ==============================
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, { threshold: 0.1 });
+
 projectCards.forEach(card => {
-
-    card.style.transition =
-        "opacity 0.3s ease, transform 0.3s ease";
-
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+    card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    observer.observe(card);
 });
