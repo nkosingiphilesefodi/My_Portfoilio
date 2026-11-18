@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Nkosingiphile Sefodi</title>
+
+    <link rel="stylesheet" href="css/exp.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            height: 220px;
+            border: 1px solid rgba(255,255,255,.07);
+            transition: .4s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(138,79,255,.35);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        Nkosingiphile <span>Portfolio</span>
+    </div>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="nav-cv-btn"><a href="cv/Nkosingiphile_Sefodi_CV.pdf" download>Download CV</a></li>
+        </ul>
+    </nav>
+
+    <a class="hire-btn" href="cv/Nkosingiphile_Sefodi_CV.pdf" download>
+        Download CV
+    </a>
+</header>
+
+<section class="experience">
+
+    <div class="page-header">
+        <h1>Gallery</h1>
+        <p>A visual collection of events, projects and moments.</p>
+    </div>
+
+    <div class="gallery-grid">
+        <img src="images/campusfinddash.png" alt="Campus Find Dashboard">
+        <img src="images/income dash.png" alt="Income Dashboard">
+        <img src="images/lifetracker.png" alt="Life Tracker">
+        <img src="images/Login screen.png" alt="Login Screen">
+        <img src="images/final app login screen.png" alt="App Login Screen">
+        <img src="images/registerfullregist.png" alt="Register Screen">
+        <img src="images/studysharefull.png" alt="StudyShare">
+        <img src="images/javachatapp.jpg" alt="Java Chat App">
+        <img src="images/portfiolio.png" alt="Portfolio Screenshot">
+        <img src="images/P1.png" alt="Project Screenshot">
+    </div>
+
+</section>
+
+<script src="js/exp.js"></script>
+
+</body>
+</html>
