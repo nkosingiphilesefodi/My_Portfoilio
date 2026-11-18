@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Projects | Nkosingiphile Sefodi</title>
 
     <link rel="stylesheet" href="css/projects.css">
@@ -15,12 +12,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
 </head>
 
-
 <body>
-    <!-- ======= NAVIGATION ========== -->
 
     <header>
         <div class="logo">
@@ -30,7 +24,6 @@
             <i class="fas fa-bars"></i>
         </div>
         <nav id="nav-menu">
-
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutme.html">About</a></li>
@@ -40,451 +33,233 @@
                 <li><a href="certificates.html">Certificates</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="nav-cv-btn"><a href="cv/Nkosingiphile_Sefodi_CV.pdf" download>Download CV</a></li>
             </ul>
-
         </nav>
-
-        <a class="hire-btn"
-            href="cv/Nkosingiphile_Sefodi_CV.pdf"download>
+        <a class="hire-btn" href="cv/Nkosingiphile_Sefodi_CV.pdf" download>
             Download CV
         </a>
-
     </header>
-    <!-- ================= PROJECTS ================= -->
 
     <section class="projects">
 
-        <!-- PAGE HEADER -->
-
         <div class="page-header">
-
-            <h1>
-                My <span>Projects</span>
-            </h1>
-
+            <h1>My <span>Projects</span></h1>
             <p>
-                A collection of academic, personal and web development projects
-                I have worked on throughout my learning journey.
+                A collection of personal, academic and learnership projects built
+                throughout my journey in software development and data science.
             </p>
-
         </div>
 
-        <!-- PROJECT FILTERS -->
-
+        <!-- ── FILTERS ── -->
         <div class="filters">
-
-            <button class="active" data-filter="all">
-                All Projects
-            </button>
-
-            <button data-filter="web">
-                Web Development
-            </button>
-
-            <button data-filter="javascript">
-                JavaScript
-            </button>
-
-            <button data-filter="academic">
-                Academic
-            </button>
-
-            <button data-filter="learning">
-                Learning Projects
-            </button>
-
+            <button class="active" data-filter="all">All Projects</button>
+            <button data-filter="fullstack">Full Stack</button>
+            <button data-filter="javascript">JavaScript Apps</button>
+            <button data-filter="academic">Academic</button>
+            <button data-filter="data-ai">Data & AI</button>
         </div>
 
-        <!-- PROJECT GRID -->
-
+        <!-- ── PROJECT GRID ── -->
         <div class="projects-grid">
-            <!-- ================= MY PORTFOLIO ================= -->
 
-            <div class="project-card web">
-                <img
-                    src="images/portfiolio.png"
-                    alt="Nkosingiphile Portfolio Website">
+            <!-- ======= PORTFOLIO (Full Stack) ======= -->
+            <div class="project-card fullstack" data-complexity="3">
+
+                <div class="project-img">
+                    <img src="images/portfiolio.png" alt="Nkosingiphile Portfolio Website">
+                </div>
 
                 <div class="project-content">
-                    <h3>
-                        Personal Portfolio
-                    </h3>
+                    <div class="project-meta">
+                        <span class="category-badge fullstack-badge">Full Stack</span>
+                        <span class="complexity">
+                            <i class="fas fa-signal"></i> Advanced
+                        </span>
+                    </div>
+                    <h3>Personal Portfolio</h3>
                     <p>
-                        My personal portfolio website showcasing my projects,
-                        technical skills, academic experience, leadership roles,
-                        certificates and professional journey.
-
+                        My personal portfolio website built from scratch — showcasing
+                        projects, skills, experience, leadership and my full professional
+                        journey. Fully responsive with animations and a custom design.
                     </p>
-
                     <div class="tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="buttons">
+                        <a href="index.html" class="demo">
+                            <i class="fas fa-eye"></i> Live Site
+                        </a>
+                        <a href="https://github.com/phile050124/My_Portfoilio" target="_blank" class="github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
 
+            </div>
+
+            <!-- ======= JGA (Academic) ======= -->
+            <div class="project-card academic" data-complexity="2">
+
+                <div class="project-img placeholder placeholder-academic">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="category-badge academic-badge">Academic</span>
+                        <span class="complexity">
+                            <i class="fas fa-signal"></i> Intermediate
+                        </span>
+                    </div>
+                    <h3>JGA Project</h3>
+                    <p>
+                        An academic project completed as part of my Informatics
+                        studies at Tshwane University of Technology. Focused on
+                        building and structuring a responsive web-based solution
+                        following academic requirements and standards.
+                    </p>
+                    <div class="tech">
                         <span>HTML</span>
-
                         <span>CSS</span>
-
                         <span>JavaScript</span>
-
+                        <span>TUT Academic</span>
                     </div>
-
                     <div class="buttons">
-
-
-                        <a href="index.html"class="demo">
-
-                            <i class="fas fa-eye"></i>
-                            View Project
+                        <a href="https://github.com/phile050124/JGA_Project" target="_blank" class="demo">
+                            <i class="fas fa-graduation-cap"></i> View Work
                         </a>
-
-
-                        <a href="https://github.com/phile050124/My_Portfoilio"
-                            target="_blank"
-                            class="github">
-
-                            <i class="fab fa-github"></i>
-                            GitHub
-
+                        <a href="https://github.com/phile050124/JGA_Project" target="_blank" class="github">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-
-
                     </div>
-
-
                 </div>
 
             </div>
 
-            <!-- ================= TUT PROJECTS ================= -->
+            <!-- ======= BUDGETLY (JavaScript Apps) ======= -->
+            <div class="project-card javascript" data-complexity="2">
 
-            <div class="project-card academic">
-
-                <img
-                    src="images/projects/tut.jpg"
-                    alt="TUT Academic Projects">
-
-                <div class="project-content">
-                    <h3>
-                        TUT Academic Projects
-                    </h3>
-                    <p>
-                        A collection of academic projects completed during
-                        my Informatics studies at Tshwane University of
-                        Technology. These projects demonstrate my growing
-                        skills in software development and information systems.
-                    </p>
-
-                    <div class="tech">
-                        <span>Java</span>
-                        <span>Database</span>
-                        <span>Software Development</span>
-                    </div>
-
-                    <div class="buttons">
-                        <a href="#"
-                            class="demo">
-                            <i class="fas fa-graduation-cap"></i>
-                            Academic Work
-
-                        </a>
-                        
-                        <a href="https://github.com/phile050124/TUT"
-                            target="_blank"
-                            class="github">
-
-                            <i class="fab fa-github"></i>
-                            GitHub
-
-                        </a>
-
-
-                    </div>
-
-
+                <div class="project-img placeholder placeholder-js">
+                    <i class="fas fa-wallet"></i>
                 </div>
 
-            </div>
-
-
-
-            <!-- ================= JGA PROJECT ================= -->
-
-            <div class="project-card web">
-
-                <img
-                    src="images/projects/jga.jpg"
-                    alt="JGA Project">
-
                 <div class="project-content">
-
-
-                    <h3>
-                        JGA Project
-                    </h3>
-
-
+                    <div class="project-meta">
+                        <span class="category-badge js-badge">JavaScript App</span>
+                        <span class="complexity">
+                            <i class="fas fa-signal"></i> Intermediate
+                        </span>
+                    </div>
+                    <h3>Budgetly</h3>
                     <p>
-
-                        A web development project built as part of my
-                        practical learning journey. The project focuses
-                        on creating and structuring a responsive web-based
-                        solution.
-
+                        A budgeting web application built during my Systems Development
+                        learnership at Kasi Digital. Tracks income and expenses, helping
+                        users manage and visualise their personal finances.
                     </p>
-
-
                     <div class="tech">
-
+                        <span>JavaScript</span>
                         <span>HTML</span>
-
                         <span>CSS</span>
-
-                        <span>JavaScript</span>
-
+                        <span>Kasi Digital</span>
                     </div>
-
-
                     <div class="buttons">
-
-
-                        <a href="#"
-                            class="demo">
-
-                            <i class="fas fa-code"></i>
-                            In Development
-
+                        <a href="https://github.com/phile050124/Budgetly" target="_blank" class="demo">
+                            <i class="fas fa-eye"></i> View Project
                         </a>
-
-
-                        <a href="https://github.com/phile050124/JGA_Project"
-                            target="_blank"
-                            class="github">
-
-                            <i class="fab fa-github"></i>
-                            GitHub
-
+                        <a href="https://github.com/phile050124/Budgetly" target="_blank" class="github">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-
-
                     </div>
-
-
                 </div>
 
             </div>
 
+            <!-- ======= FOODIFY (JavaScript Apps) ======= -->
+            <div class="project-card javascript" data-complexity="2">
 
-
-            <!-- ================= BUDGETLY ================= -->
-
-            <div class="project-card javascript">
-
-                <img
-                    src="images/projects/budgetly.jpg"
-                    alt="Budgetly Application">
-
-                <div class="project-content">
-
-
-                    <h3>
-                        Budgetly
-                    </h3>
-
-
-                    <p>
-
-                        A budgeting application project designed to explore
-                        application development concepts and financial
-                        management functionality.
-
-                    </p>
-
-
-                    <div class="tech">
-
-                        <span>JavaScript</span>
-
-                        <span>Web Development</span>
-
-                        <span>Application Development</span>
-
-                    </div>
-
-
-                    <div class="buttons">
-
-
-                        <a href="#"
-                            class="demo">
-
-                            <i class="fas fa-code"></i>
-                            In Development
-
-                        </a>
-
-
-                        <a href="https://github.com/phile050124/Budgetly"
-                            target="_blank"
-                            class="github">
-
-                            <i class="fab fa-github"></i>
-                            GitHub
-
-                        </a>
-
-
-                    </div>
-
-
+                <div class="project-img placeholder placeholder-js">
+                    <i class="fas fa-utensils"></i>
                 </div>
 
-            </div>
-
-
-
-            <!-- ================= FOODIFY ================= -->
-
-            <div class="project-card javascript">
-
-                <img
-                    src="images/projects/foodify.jpg"
-                    alt="Foodify Application">
-
                 <div class="project-content">
-
-
-                    <h3>
-                        Foodify
-                    </h3>
-
-
+                    <div class="project-meta">
+                        <span class="category-badge js-badge">JavaScript App</span>
+                        <span class="complexity">
+                            <i class="fas fa-signal"></i> Intermediate
+                        </span>
+                    </div>
+                    <h3>Foodify</h3>
                     <p>
-
-                        A JavaScript-based project exploring the development
-                        of a food-related web application and user interface.
-
+                        A food-related web application developed during my Systems
+                        Development learnership at Kasi Digital. Built to explore
+                        dynamic UI development, DOM manipulation and application
+                        structure using JavaScript.
                     </p>
-
-
                     <div class="tech">
-
                         <span>JavaScript</span>
-
                         <span>HTML</span>
-
                         <span>CSS</span>
-
+                        <span>Kasi Digital</span>
                     </div>
-
-
                     <div class="buttons">
-
-
-                        <a href="#"
-                            class="demo">
-
-                            <i class="fas fa-code"></i>
-                            In Development
-
+                        <a href="https://github.com/phile050124/Foodify" target="_blank" class="demo">
+                            <i class="fas fa-eye"></i> View Project
                         </a>
-
-
-                        <a href="https://github.com/phile050124/Foodify"
-                            target="_blank"
-                            class="github">
-
-                            <i class="fab fa-github"></i>
-                            GitHub
-
+                        <a href="https://github.com/phile050124/Foodify" target="_blank" class="github">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-
-
                     </div>
-
-
                 </div>
 
             </div>
 
+            <!-- ======= DATA SCIENCE (Data & AI) ======= -->
+            <div class="project-card data-ai" data-complexity="3">
 
-
-            <!-- ================= LEARNING PROJECT ================= -->
-
-            <div class="project-card learning">
-
-                <img
-                    src="images/projects/data.jpg"
-                    alt="Data Science Learning Project">
+                <div class="project-img placeholder placeholder-data">
+                    <i class="fas fa-brain"></i>
+                </div>
 
                 <div class="project-content">
-
-
-                    <h3>
-                        Data Science Projects
-                    </h3>
-
-
+                    <div class="project-meta">
+                        <span class="category-badge data-badge">Data & AI</span>
+                        <span class="complexity">
+                            <i class="fas fa-signal"></i> Advanced
+                        </span>
+                    </div>
+                    <h3>Data Science Projects</h3>
                     <p>
-
-                        A collection of machine learning and data science
-                        projects and exercises exploring classification,
-                        regression and recommendation systems.
-
+                        A collection of machine learning and data science work completed
+                        during my NQF 5 Data Science learnership at Axplore AI Academy.
+                        Covers classification, regression, data analysis and Python-based
+                        AI exercises across multiple repositories.
                     </p>
-
-
                     <div class="tech">
-
                         <span>Python</span>
-
                         <span>Machine Learning</span>
-
-                        <span>Data Science</span>
-
+                        <span>Data Analysis</span>
+                        <span>Axplore AI</span>
                     </div>
-
-
                     <div class="buttons">
-
-
-                        <a href="https://github.com/phile050124"
-                            target="_blank"
-                            class="demo">
-
-                            <i class="fas fa-book"></i>
-                            Learning Journey
-
+                        <a href="https://github.com/phile050124" target="_blank" class="demo">
+                            <i class="fas fa-database"></i> View Repos
                         </a>
-
-
-                        <a href="https://github.com/phile050124"
-                            target="_blank"
-                            class="github">
-
-                            <i class="fab fa-github"></i>
-                            GitHub
-
+                        <a href="https://github.com/phile050124" target="_blank" class="github">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-
-
                     </div>
-
-
                 </div>
 
             </div>
-
 
         </div>
-
 
     </section>
 
-
-
-    <!-- ================= JAVASCRIPT ================= -->
-
     <script src="js/projects.js"></script>
 
-
 </body>
-
 </html>
